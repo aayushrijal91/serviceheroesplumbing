@@ -1,0 +1,591 @@
+@function imgUrl($file, $path: "background") {
+    @return url("../images/" + $path + "/" + $file) no-repeat;
+}
+
+header {
+    .header-top-bar {
+        form {
+            .form-input-wrapper {
+                position: relative;
+
+                input {
+                    min-height: 57px;
+                    font-size: 0.875rem;
+                    color: $black;
+                    padding: 6px 16px 6px 47px;
+                    font-weight: 500;
+                    background: rgba(217, 217, 217, 0.28);
+                    border-radius: 4px;
+                    border: 0;
+                    font-family: $helvetica-condensed;
+                    text-transform: uppercase;
+
+                    &:focus {
+                        box-shadow: none;
+                        outline: none;
+                    }
+
+                    &::placeholder {
+                        color: rgba(40, 40, 40, 0.42);
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        min-height: 50px;
+                    }
+                }
+
+                .icon {
+                    position: absolute;
+                    top: 1rem;
+                    left: 20px;
+                }
+            }
+        }
+
+        .vertical-divider {
+            width: 2px;
+            height: 77px;
+            background: rgba(217, 217, 217, 0.49);
+        }
+    }
+
+    .banner {
+        font-family: $helvetica-condensed;
+
+        .mainbar {
+            background: $jet-black imgUrl("banner-mobile.png") center bottom;
+            background-size: contain;
+
+            @include media-breakpoint-up(md) {
+                background: $jet-black imgUrl("banner.png") right bottom;
+                background-size: contain;
+            }
+
+            .cta {
+                padding: 31px;
+                color: $white;
+                text-transform: uppercase;
+
+                @include media-breakpoint-down(sm) {
+                    padding: 16px;
+                }
+
+                &.cta-1 {
+                    background: $quartinary-dark imgUrl("cta-1.png", "lib") left center;
+                    background-size: contain;
+                }
+
+                &.cta-2 {
+                    background: $quartinary-dark imgUrl("cta-2.png", "lib") left center;
+                    background-size: contain;
+                }
+            }
+        }
+
+        .sidebar {
+            background: $tertiary;
+            padding: 30px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            .sidebar-heading {
+                font-size: 34px;
+                text-align: center;
+                color: $secondary;
+                letter-spacing: 0.03em;
+                font-family: $marker;
+                line-height: 1;
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 23px;
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+                padding: 12px 8px;
+
+                .h19 {
+                    font-size: 0.625rem;
+                }
+            }
+        }
+    }
+}
+
+section.mobile-callback-form {
+    background-color: $quartinary;
+    padding: 14px 0;
+    color: $white;
+    font-family: $helvetica-condensed;
+    text-transform: uppercase;
+    line-height: 1;
+
+    .hero {
+        font-size: 33.5px;
+    }
+
+    .sub {
+        font-size: 17px;
+    }
+
+    form {
+        .form-input-wrapper {
+            position: relative;
+
+            input {
+                min-height: 47px;
+                color: $white;
+                font-size: 1.45rem;
+                padding: 6px 16px 6px 47px;
+                font-weight: 500;
+                background: rgba(217, 217, 217, 0.28);
+                border-radius: 4px;
+                border: 0;
+                font-family: $helvetica-condensed;
+                text-transform: uppercase;
+
+                &:focus {
+                    box-shadow: none;
+                    outline: none;
+                }
+
+                &::placeholder {
+                    color: rgba(255, 255, 255, 0.42);
+                }
+            }
+
+            .icon {
+                position: absolute;
+                top: 1rem;
+                left: 20px;
+            }
+        }
+
+        button {
+            font-size: 30px;
+            text-transform: uppercase;
+            color: $quartinary;
+        }
+    }
+}
+
+section.form {
+    background-color: $light;
+
+    @include media-breakpoint-up(md) {
+        padding: 112px 0 32px;
+    }
+
+    .container {
+        box-shadow: 0px 40px 15px -25px rgba(0, 0, 0, 0.25);
+
+        .hero-heading {
+            font-size: 5.3125rem; // 85px
+            color: $quartinary;
+            font-family: $helvetica-condensed;
+            line-height: 1;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+
+            @include media-breakpoint-down(lg) {
+                font-size: 3.8rem;
+            }
+        }
+
+        .form-main {
+            background-color: $white;
+            padding: 19px 0 24px;
+
+            @include media-breakpoint-up(md) {
+                padding: 45px 24px 95px;
+            }
+
+            @include media-breakpoint-up(lg) {
+                padding: 45px 45px 95px;
+            }
+
+            form {
+                label {
+                    font-size: 1.125rem; // 18px
+                    color: $black;
+                    font-family: $helvetica-condensed;
+                    text-transform: uppercase;
+                    line-height: 1;
+                    padding-bottom: 12px;
+                    letter-spacing: -0.02em;
+
+                    @include media-breakpoint-down(sm) {
+                        font-size: 0.9375rem;
+                    }
+                }
+
+                input {
+                    min-height: 66px;
+                    font-size: 0.875rem;
+                    color: $black;
+                    padding: 6px 30px;
+                    font-weight: 500;
+                    background: $light-grey;
+                    border-radius: 2px;
+                    border: 0;
+
+                    &:focus {
+                        box-shadow: none;
+                        outline: none;
+                    }
+
+                    &::placeholder,
+                    .disabled-service {
+                        color: $black;
+                        opacity: 0.6;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        min-height: 57px;
+                        padding: 6px 18px;
+                    }
+                }
+
+                button {
+                    min-height: 59px;
+                    text-transform: uppercase;
+                    font-family: $helvetica-condensed;
+                    color: $white;
+                    border-radius: 4px;
+                    font-size: 1.125rem;
+
+                    @include media-breakpoint-down(sm) {
+                        min-height: 50px;
+                        font-size: 0.875rem;
+                    }
+                }
+            }
+        }
+
+        .emergency-service-ad {
+            background: $primary imgUrl("emergency-service-sun.png") center;
+            background-size: cover;
+            padding-top: 27px;
+
+            @include media-breakpoint-up(xl) {
+                padding: 37px 0;
+            }
+
+            .emergency-service-vehicle {
+                @include media-breakpoint-up(xl) {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+section.reviews {
+    background: linear-gradient($light 0 65%, rgba(0, 0, 0, 0) 65% 100%);
+
+    @include media-breakpoint-down(sm) {
+        padding-top: 12px;
+    }
+
+    .review-card {
+        padding: 37px 16px;
+        color: $white;
+        font-family: $helvetica-condensed;
+        text-transform: uppercase;
+        font-size: 1.25rem;
+        line-height: 1;
+
+        .rating {
+            font-size: 65px;
+            letter-spacing: 0.01em;
+        }
+    }
+}
+
+section.help {
+    padding: 37px 0 47px;
+
+    @include media-breakpoint-up(md) {
+        padding: 108px 0 120px;
+    }
+
+    .hero-heading {
+        text-align: center;
+        font-family: $helvetica-condensed;
+        letter-spacing: -0.02em;
+        font-size: 5.3125rem; // 85px
+        line-height: 1;
+        text-transform: uppercase;
+
+        @include media-breakpoint-down(lg) {
+            font-size: 4.5rem;
+        }
+
+        @include media-breakpoint-down(md) {
+            font-size: 3.75rem;
+        }
+    }
+
+    .help-card {
+        .help-img {
+            img {
+                width: 100%;
+            }
+        }
+
+        .caption {
+            min-height: 186px;
+            display: flex;
+            background-color: $quartinary;
+            align-items: center;
+            color: $white;
+            letter-spacing: -0.02em;
+            padding: 32px;
+            font-size: 2.5rem; // 40px
+            font-family: $helvetica-condensed;
+            line-height: 1;
+            text-transform: uppercase;
+            position: relative;
+
+            @include media-breakpoint-down(xxl) {
+                font-size: 2rem;
+            }
+
+            @include media-breakpoint-down(sm) {
+                font-size: 1.875rem;
+                min-height: 139px;
+                padding: 16px 24px;
+            }
+
+            .icon {
+                position: absolute;
+                top: -37px;
+                height: 74px;
+                width: 74px;
+                background: #c12a1a;
+                border: 5px solid $quartinary;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @include media-breakpoint-down(sm) {
+                    height: 55px;
+                    width: 55px;
+                    top: -27.5px;
+                }
+            }
+        }
+
+        .contact-btn {
+            padding: 0 32px;
+            margin-top: -32px;
+            position: relative;
+
+            @include media-breakpoint-down(sm) {
+                margin-top: -24px;
+            }
+        }
+    }
+}
+
+section.services {
+    text-transform: uppercase;
+
+    .heading {
+        background: #2d2c2c;
+        padding: 30px 0;
+        line-height: 1;
+
+        @include media-breakpoint-up(md) {
+            padding: 37px 0;
+        }
+    }
+
+    .services-main {
+        background-color: $medium-grey;
+
+        .service-nav-btns {
+            .category-nav {
+                padding: 20px;
+                font-family: $helvetica-condensed;
+                color: $grey;
+                letter-spacing: -0.02em;
+                text-decoration: none;
+                outline: none;
+                box-shadow: none;
+                text-align: center;
+                cursor: pointer;
+                user-select: none;
+                -ms-user-select: none;
+                -moz-user-select: none;
+                font-size: 1.125rem; // 18px
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 0.8125rem;
+                    padding: 17px 6px;
+                }
+
+                &.active {
+                    border: 0;
+                    border-bottom: 3px solid $secondary;
+                    border-radius: 0;
+                    color: $white;
+                }
+            }
+        }
+
+        .service-card {
+            border-radius: 4px;
+            overflow: hidden;
+
+            .title-img img {
+                height: 250px;
+                width: 100%;
+                object-fit: cover;
+
+                @include media-breakpoint-down(sm) {
+                    height: 191px;
+                }
+            }
+
+            .caption {
+                background-color: $primary;
+                color: white;
+                font-family: $helvetica-condensed;
+                letter-spacing: -0.02em;
+                min-height: 194px;
+                display: flex;
+                align-items: center;
+                line-height: 1;
+                padding: 39px;
+                font-size: 3rem; // 48px
+                
+                @include media-breakpoint-down(xl) {
+                    font-size: 2.5rem;
+                    min-height: 148px;
+                    padding: 31px;
+                }
+
+                @include media-breakpoint-down(lg) {
+                    font-size: 2.3rem;
+                    min-height: 148px;
+                    padding: 29px;
+                }
+            }
+        }
+    }
+}
+
+section.about {
+    position: relative;
+
+    @include media-breakpoint-down(xl) {
+        background: $tertiary imgUrl("hero-footer.png") center bottom;
+        background-size: contain;
+    }
+
+    @include media-breakpoint-down(sm) {
+        background: $tertiary imgUrl("hero-footer-sm.png") center bottom;
+        background-size: contain;
+    }
+
+    .top {
+        padding: 90px 0 71px;
+
+        @include media-breakpoint-up(xl) {
+            background: $tertiary;
+            background-size: contain;
+        }
+
+        @include media-breakpoint-between(xl, xxl) {
+            background: $tertiary imgUrl("hero-footer.png") center right;
+            background-size: contain;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding: 29px 0;
+            text-align: center;
+        }
+
+        .hero-heading {
+            color: $white;
+            font-family: $helvetica-condensed;
+            line-height: 0.89;
+            text-transform: uppercase;
+            font-size: 5.625rem; // 90px
+
+            @include media-breakpoint-down(xl) {
+                font-size: 4.5rem;
+            }
+
+            @include media-breakpoint-down(md) {
+                font-size: 2.85rem;
+            }
+        }
+
+        .contact-card {
+            background-color: $white;
+            border-radius: 12px;
+            padding: 28px 44px;
+
+            @include media-breakpoint-down(sm) {
+                padding: 13px 14px;
+            }
+        }
+    }
+
+    .bottom {
+        background-color: $dark;
+        padding: 21px 0;
+        color: $white;
+
+        @include media-breakpoint-up(md) {
+            padding: 32px 0;
+        }
+    }
+
+    .superhero_footer {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+
+        @include media-breakpoint-down(xxl) {
+            display: none;
+        }
+    }
+
+    .book_online {
+        @include media-breakpoint-up(lg) {
+            position: absolute;
+            right: 2%;
+            bottom: 25%;
+            z-index: 100;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            right: 8%;
+            bottom: 10%;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        .h15 {
+            font-size: 2.6875rem;
+        }
+    }
+}
+
+footer {
+    font-size: 0.875rem;
+    background-color: #221f1f;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 0.61rem;
+    }
+}
