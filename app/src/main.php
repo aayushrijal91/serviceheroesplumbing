@@ -177,7 +177,7 @@ include __DIR__ . '/header.php';
                         </div>
                         Team Of Professional Tradespeople
                     </div>
-                    <div class="contact-btn"><a href="#form" class="btn btn-primary h15 rounded-4 text-uppercase line-height-1 font-helvetica-condensed py-3 py-md-4 px-5 px-xl-7">Book Online</a></div>
+                    <div class="contact-btn"><a href="#form" class="btn btn-primary px-md-5 px-xl-7">Book Online</a></div>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4">
@@ -192,7 +192,7 @@ include __DIR__ . '/header.php';
                         </div>
                         Transparent<br> Pricing
                     </div>
-                    <div class="contact-btn"><a href="#form" class="btn btn-primary h15 rounded-4 text-uppercase line-height-1 font-helvetica-condensed py-3 py-md-4 px-5 px-xl-7">Book Online</a></div>
+                    <div class="contact-btn"><a href="#form" class="btn btn-primary px-md-5 px-xl-7">Book Online</a></div>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4">
@@ -212,7 +212,7 @@ include __DIR__ . '/header.php';
                         </div>
                         Dedicated<br> Service
                     </div>
-                    <div class="contact-btn"><a href="#form" class="btn btn-primary h15 rounded-4 text-uppercase line-height-1 font-helvetica-condensed py-3 py-md-4 px-5 px-xl-7">Book Online</a></div>
+                    <div class="contact-btn"><a href="#form" class="btn btn-primary px-md-5 px-xl-7">Book Online</a></div>
                 </div>
             </div>
         </div>
@@ -226,8 +226,8 @@ include __DIR__ . '/header.php';
                 <div class="col-12 col-md-auto text-white h3 font-helvetica-condensed text-center">Our Services</div>
                 <div class="col-md col-lg-5 col-xl-4 pt-3 pt-md-0">
                     <div class="row gx-1 gx-md-3">
-                        <div class="col-6"><a href="#form" class="btn d-block btn-primary h15 rounded-4 text-uppercase line-height-1 font-helvetica-condensed py-3 py-md-4">Book Online</a></div>
-                        <div class="col-6"><a href="tel:<?= $phone_number ?>" class="btn d-block btn-primary h15 rounded-4 text-uppercase line-height-1 font-helvetica-condensed py-3 py-md-4"><?= $phone_number ?></a></div>
+                        <div class="col-6"><a href="#form" class="btn btn-primary">Book Online</a></div>
+                        <div class="col-6"><a href="tel:<?= $phone_number ?>" class="btn btn-primary"><?= $phone_number ?></a></div>
                     </div>
                 </div>
             </div>
