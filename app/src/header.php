@@ -54,38 +54,20 @@
 					<div class="col-xxl-11">
 						<div class="row justify-content-center justify-content-lg-between align-items-center">
 							<div class="col-12 d-md-none">
-								<div class="row gx-1">
-									<div class="col-6">
-										<a href="#form" class="btn btn-extra-dark rounded-4 text-white text-uppercase px-3 py-2 h17 font-helvetica-condensed d-flex align-items-center justify-content-center">
-											<div class="pe-2">
-												<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M4.375 4.375H5" stroke="white" stroke-miterlimit="10" stroke-linecap="square" />
-													<path d="M7.5 4.375H10.625" stroke="white" stroke-miterlimit="10" stroke-linecap="square" />
-													<path d="M4.375 7.5H5" stroke="white" stroke-miterlimit="10" stroke-linecap="square" />
-													<path d="M7.5 7.5H10.625" stroke="white" stroke-miterlimit="10" stroke-linecap="square" />
-													<path d="M4.375 10.625H7.5" stroke="white" stroke-miterlimit="10" stroke-linecap="square" />
-													<path d="M10 14.375V10.625H13.75L10 14.375Z" fill="white" />
-													<path d="M10 14.375V10.625H13.75" stroke="white" stroke-miterlimit="10" />
-													<path d="M10 14.375H1.25V0.625H13.75V10.625L10 14.375Z" stroke="white" stroke-miterlimit="10" stroke-linecap="square" />
-												</svg>
-											</div>
-											<div>Book Online</div>
+								<div class="row gx-1 mobile-btn-row">
+								<div class="col-6">
+										<a href="#form" class="btn btn-extra-dark rounded-4 text-white text-uppercase p-2 font-helvetica-condensed">
+											Book Online
 										</a>
 									</div>
 									<div class="col-6">
-										<a href="tel:<?= $phone_number ?>" class="btn btn-tertiary rounded-4 text-white px-3 py-2 h17 font-helvetica-condensed d-flex align-items-center justify-content-center">
-											<div class="pe-2">
-												<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M11.5212 9.64338L9.14378 8.58725C8.89676 8.47678 8.62011 8.45121 8.35703 8.51453C8.09395 8.57784 7.85923 8.72649 7.68953 8.93725L7.0044 9.79388C5.88117 9.07311 4.925 8.12053 4.20003 7L5.05665 6.31488C5.26722 6.14522 5.41574 5.91066 5.47905 5.64777C5.54236 5.38487 5.51691 5.10842 5.40665 4.8615L4.3584 2.478C4.24061 2.2126 4.03237 1.99766 3.77082 1.87154C3.50927 1.74541 3.21143 1.71629 2.9304 1.78938L0.917903 2.31438C0.625935 2.38992 0.372095 2.57051 0.204993 2.82157C0.0378917 3.07263 -0.0307271 3.3765 0.0122776 3.675C0.387167 6.27793 1.59502 8.68942 3.45504 10.5485C5.31505 12.4076 7.72716 13.6142 10.3303 13.9878C10.6286 14.03 10.932 13.9608 11.1826 13.7934C11.4331 13.626 11.6131 13.3722 11.6883 13.0804L12.2133 11.0679C12.2863 10.7869 12.2567 10.4891 12.1299 10.228C12.003 9.96692 11.7872 9.75962 11.5212 9.64338Z" fill="white" />
-													<path d="M10.5 6.99553e-06C9.91038 -0.00106595 9.3301 0.147089 8.81317 0.430675C8.29624 0.71426 7.85949 1.12405 7.54358 1.62189C7.22767 2.11972 7.04289 2.6894 7.00644 3.27788C6.96999 3.86636 7.08306 4.45449 7.33512 4.98751L6.99999 7.00001L9.01249 6.66488C9.4872 6.88905 10.0063 7.00355 10.5312 6.99992C11.0562 6.99628 11.5736 6.8746 12.0452 6.64388C12.5167 6.41317 12.9303 6.07933 13.2554 5.66709C13.5804 5.25484 13.8086 4.77476 13.9229 4.26239C14.0373 3.75002 14.0349 3.21849 13.916 2.70716C13.7971 2.19583 13.5647 1.7178 13.2359 1.30848C12.9072 0.899152 12.4907 0.569015 12.0171 0.342516C11.5435 0.116017 11.025 -0.00104254 10.5 6.99553e-06Z" fill="white" />
-												</svg>
-											</div>
-											<div><?= $phone_number ?></div>
+										<a href="tel:<?= $phone_number ?>" class="btn btn-tertiary rounded-4 text-white p-2 font-helvetica-condensed d-flex align-items-center justify-content-center">
+											<?= $phone_number ?>
 										</a>
 									</div>
 								</div>
 							</div>
-							<div class="col-12 col-md-auto mb-n5 mb-md-n6 position-relative">
+							<div class="col-auto mb-n5 mb-md-n6 position-relative">
 								<a href="./">
 									<?= renderImg("logo.png", "logo", "w-100") ?>
 								</a>
