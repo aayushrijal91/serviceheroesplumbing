@@ -2,7 +2,7 @@
 include __DIR__ . '/env.php';
 
 $location = "Sydney";
-$site = "Service Heroes " . $location;
+$site = "Service Heroes Plumbing" . $location;
 $phone_number = "0485 800 214";
 $admin_email = 'arijal@aiims.com.au';
 $no_reply_email = 'info@servicesheroes.sydney';
